@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  /* ===== Paleta — editorial premium, derivada da identidade da logo ===== */
+  --color-cream: #FBF6F0;      /* fundo principal — off-white quente */
+  --color-ivory: #F4EBE1;      /* fundo secundário */
+  --color-wine: #4A1D1B;       /* texto/heading principal — bordô profundo */
+  --color-wine-dark: #2E1211;  /* bordô mais escuro — CTAs, seções de destaque */
+  --color-wine-soft: #74352F;  /* bordô suave — labels itálicos, subtítulos */
+  --color-terracotta: #B0603B; /* acento primário — CTAs, links, destaques */
+  --color-copper: #B87B4B;     /* acento secundário — dourado quente, preços/labels */
+  --color-rose: #D9A17E;       /* acento claro — realces, CTA sobre fundo escuro */
+  --color-blush: #EFDDCB;      /* acento mais claro — realces pontuais */
+  --color-ink: #2A1D1A;        /* texto de corpo */
+
+  /* ===== Tipografia ===== */
+  --font-display: "Cormorant Garamond", "Playfair Display", serif;
+  --font-body: "Manrope", "Inter", sans-serif;
+
+  --breakpoint-xs: 22.5rem; /* 360px */
+
+  --animate-marquee: marquee 34s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@layer base {
+  * {
+    @apply border-wine/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-body antialiased;
+    font-feature-settings: "ss01" 1;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-wine-dark;
+  }
+
+  ::selection {
+    background: var(--color-rose);
+    color: var(--color-wine-dark);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-terracotta);
+    outline-offset: 3px;
+  }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@layer utilities {
+  .divider-label {
+    @apply flex items-center gap-4 text-copper text-[0.7rem] tracking-[0.35em] uppercase;
+  }
+  .divider-label::before,
+  .divider-label::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: currentColor;
+    opacity: 0.4;
+  }
+
+  .container-studio {
+    @apply mx-auto w-full max-w-[1400px] px-6 sm:px-8 lg:px-14;
+  }
+
+  /* Textura de grão discretíssima — profundidade sem pesar o fundo claro */
+  .grain-overlay {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/></svg>");
+    background-repeat: repeat;
+  }
+
+  /* Orbes de gradiente — atmosfera abstrata, sem ilustrações */
+  .orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    pointer-events: none;
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1px var(--color-wine-soft);
+    color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
