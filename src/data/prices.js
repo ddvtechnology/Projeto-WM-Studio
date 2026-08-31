@@ -5,7 +5,7 @@ export const prices = {
     female: "R$ 30,00",
     male: "R$ 25,00",
     hennaOnly: "R$ 20,00",
-    personalizado: "R$ 40,00",
+    personalizado: "R$ 30,00",
   },
 
   basicHairstyle: {
