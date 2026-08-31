@@ -32,12 +32,7 @@ export default function About() {
       <GradientOrb color="var(--color-copper)" size={420} className="right-[-10%] top-[15%] hidden lg:block" />
       <GradientOrb color="var(--color-rose)" size={280} className="left-[-6%] bottom-[5%] hidden lg:block" drift={false} />
 
-      {/* Marca d'água tipográfica decorativa */}
-      <span
-        aria-hidden="true"
-        className="text-outline pointer-events-none select-none absolute -right-4 top-28 hidden xl:block font-display text-9xl leading-none opacity-70"
-      >
-      </span>
+
 
       <div className="container-studio relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         

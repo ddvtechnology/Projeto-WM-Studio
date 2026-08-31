@@ -41,11 +41,11 @@ const policies = [
 function AccordionItem({ item, index, openIndex, setOpenIndex }) {
   const isOpen = openIndex === index;
   return (
-    <div className="border-b border-wine-dark/12">
+    <div className="border-b border-wine-dark/10">
       <button
         onClick={() => setOpenIndex(isOpen ? null : index)}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-between py-5 text-left"
+        className="flex w-full items-center justify-between py-5 text-left cursor-pointer"
       >
         <span className="font-display text-lg sm:text-xl text-wine-dark pr-4">{item.title}</span>
         <motion.span
