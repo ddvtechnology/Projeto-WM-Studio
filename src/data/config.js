@@ -16,6 +16,7 @@ export const studioConfig = {
   instagramUrl: "https://www.instagram.com/williane.monteiro__?igsi=aWxwMHJsd3BmaDll",
 
   location: "Atendimento com hora marcada",
+  locationUrl: "https://www.google.com/maps?q=-8.517909,-36.441101&g_ep=Eg1tbF8yMDI2MDgyNV8wIOC7DCoASAJQAg%3D%3D",
 };
 
 export const navLinks = [

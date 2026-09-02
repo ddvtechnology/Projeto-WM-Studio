@@ -25,6 +25,19 @@ export default function Footer() {
             <p className="text-xs tracking-[0.2em] uppercase text-copper mt-1">
               {studioConfig.profession}
             </p>
+            <a
+              href={studioConfig.locationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex items-center gap-1.5 text-xs text-ink/60 hover:text-terracotta transition-colors"
+              aria-label="Ver localização no Google Maps"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width={13} height={13}>
+                <path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z" />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+              Ver no Maps
+            </a>
           </div>
         </div>
 
