@@ -36,7 +36,7 @@ export default function Footer() {
                 <path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z" />
                 <circle cx="12" cy="9" r="2.5" />
               </svg>
-              Ver no Maps
+              Ver Localização
             </a>
           </div>
         </div>
